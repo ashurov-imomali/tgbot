@@ -1,5 +1,5 @@
 package usecase
 
-func (c *UseCase) Pong() string {
+func (u *UseCase) Pong() string {
 	return "ping"
 }

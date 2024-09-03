@@ -24,4 +24,5 @@ func New(conf config.Configs, l logger.ILogger) IUseCase {
 
 type IUseCase interface {
 	Pong() string
+	SendMessageToGroup(msg string) error
 }
