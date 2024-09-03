@@ -24,4 +24,3 @@ deploy:
     - cd /srv && docker compose pull tg_bot && docker compose up -d
   only:
     - dev
-
