@@ -17,7 +17,7 @@ RUN --mount=type=cache,target=/gomod-cache --mount=type=cache,target=/go-cache \
 RUN --mount=type=cache,target=/gomod-cache --mount=type=cache,target=/go-cache \
 
 
-    CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o tg_bot ./cmd/main.go
+    CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o tg_bot ./cmd/tgapi/main.go
 
 
 FROM alpine:latest
