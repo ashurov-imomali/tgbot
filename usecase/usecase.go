@@ -6,6 +6,11 @@ import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
+type IUseCase interface {
+	Pong() string
+	SendMessageToGroup(msg string) error
+}
+
 type UseCase struct {
 	t *tgbotapi.BotAPI
 	l logger.ILogger
@@ -20,9 +25,4 @@ func New(conf config.Configs, l logger.ILogger) IUseCase {
 		t: api,
 		l: l,
 	}
-}
-
-type IUseCase interface {
-	Pong() string
-	SendMessageToGroup(msg string) error
 }
